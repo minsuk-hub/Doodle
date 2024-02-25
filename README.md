@@ -28,15 +28,11 @@ Image doodle for Android. You can undo, zoom, move, add text, textures, etc. Als
 
 # Feature 기능
 
-  * Brush and shape ***브러쉬 및 모양***
-
-    The brush can choose hand-painted, mosaic, imitation, eraser, text, texture, and the imitation function is similar to that in PS, copying somewhere in the picture. Shapes can be selected from hand-drawn, arrows, lines, circles, rectangles, and so on. The background color of the brush can be selected as a color, or an image.
+  * ***브러쉬 및 모양***
 
     ***브러쉬는 손그림, 모자이크, 복제, 지우개, 텍스트, 스티커를 선택할 수 있습니다. 복제 기능은 PS의 것과 유사하며 이미지의 특정 부분을 복사합니다. 모양은 손그림, 화살표, 직선, 원, 사각형 등을 선택할 수 있습니다. 브러쉬의 배경색은 색상이나 이미지를 선택할 수 있습니다.***
 
-  * Undo/Redo ***취소/되돌리기***
-
-    Each step of the doodle operation can be undone or redone.
+    ***취소/되돌리기***
     
     ***모든 그림 작업 단계를 취소 및 되돌릴 수 있습니다。***
 
@@ -101,8 +97,7 @@ Note: When item is selected for editing after opening, it will be drawn at the t
 boolean optimizeDrawing = true;
 DoodleView mDoodleView = new DoodleView(this, bitmap, optimizeDrawing, new IDoodleListener() {
             /*
-            called when save the doodled iamge. 
-            doodle이 된 이미지를 저장할때 호출됩니다.
+            낙서한 이미지를 저장할 때 호출됩니다.
              */
             @Override
             public void onSaved(IDoodle doodle, Bitmap bitmap, Runnable callback) {
