@@ -261,13 +261,13 @@ hzw19933@gmail.com
 Q&A <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=d225a990b29a135d4a601be7a198f04572f1dbd96ccd5be944ff2ef87dda5c11"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="Doodle-涂鸦交流群" title="Doodle-涂鸦交流群"></a>  6762102
 
 
-***欢迎大家访问[我的博客](https://blog.csdn.net/u012964944)，내 블로그를 방문해주셔서 감사합니다. Doodle에 관한 더 많은 글을 읽어보세요!***
+***[내 블로그를 방문해주셔서 감사합니다. Doodle에 관한 더 많은 글을 읽어보세요!](https://blog.csdn.net/u012964944)***
 
-[《Android涂鸦画板原理详解——从初级到高级（一）》](https://blog.csdn.net/u012964944/article/details/82703684)
+[《안드로이드 그림판 기본 원리 설명 - 초급부터 고급까지（一）》](https://blog.csdn.net/u012964944/article/details/82703684)
 
-[《Android涂鸦画板原理详解——从初级到高级（二）》](https://blog.csdn.net/u012964944/article/details/83420038)
+[《안드로이드 그림판 기본 원리 설명 - 초급부터 고급까지（二）》](https://blog.csdn.net/u012964944/article/details/83420038)
 
-[《涂鸦框架的优化——解决绘制时的卡顿问题，纵享丝滑》](https://blog.csdn.net/u012964944/article/details/89211683)
+[《그림판 프레임워크 최적화 - 그리기 중의 버벅임 문제 해결, 부드러운 그림 그리기》](https://blog.csdn.net/u012964944/article/details/89211683)
 
 # License
 
