@@ -34,23 +34,23 @@ Image doodle for Android. You can undo, zoom, move, add text, textures, etc. Als
 
     ***브러쉬는 손그림, 모자이크, 복제, 지우개, 텍스트, 스티커를 선택할 수 있습니다. 복제 기능은 PS의 것과 유사하며 이미지의 특정 부분을 복사합니다. 모양은 손그림, 화살표, 직선, 원, 사각형 등을 선택할 수 있습니다. 브러쉬의 배경색은 색상이나 이미지를 선택할 수 있습니다.***
 
-  * Undo/Redo ***撤销/重做***
+  * Undo/Redo ***취소/되돌리기***
 
     Each step of the doodle operation can be undone or redone.
     
-    ***每一步的涂鸦操作都可以撤销。***
+    ***모든 그림 작업 단계를 취소 및 되돌릴 수 있습니다。***
 
-  * Zoom, move, and rotate ***放缩、移动及旋转***
+  * Zoom, move, and rotate ***축소, 이동 및 회전***
 
     In the process of doodle, you can freely zoom, move and rotate the picture with gestures. Also, you can move，rotate and scale the doodle item.
     
-    ***在涂鸦的过程中，可以自由地通过手势缩放、移动、旋转图片。可对涂鸦移动、旋转、缩放等。***
+    ***그리기 과정 중에 이미지를 제스처로 자유롭게 축소, 이동, 회전할 수 있습니다. 그림을 이동, 회전, 축소할 수 있습니다.***
 
-  * Zoomer ***放大器***
+  * Zoomer ***확대 및 축소 도구***
 
     In order to doodle more finely, an zoomer can be set up during the doodle process.
     
-    ***为了更细微地涂鸦，涂鸦过程中可以设置出现放大器。***
+    ***그림을 더 디테일하게 그리기 위해, 그림 그리기 중에 확대기를 사용할 수 있습니다.***
 
 # Usage 用法
 
@@ -71,36 +71,38 @@ dependencies {
 
 There are two ways to use the Doodle library:
 
-***这里有两种方式使用Doodle涂鸦库***
+***Doodle 라이브러리를 사용하는 방법에는 두가지가 있습니다.***
 
 ###  A. Launch DoodleActivity directly (the layout is like demo images above). If you need to customize more interactions, please use another method (Way B)．
 
-  ***使用写好的涂鸦界面，直接启动.启动的页面可参看上面的演示图片。如果需要自定义更多的交互方式，则请使用另一种方式(即B方式)。***
+  ***이미 작성된 그림 그리기 인터페이스를 사용하여 직접 시작합니다. 시작 페이지는 위의 데모 이미지를 참조하십시오. 더 많은 사용자 정의 상호작용 방식이 필요한 경우, 다른 방법(B 방법)을 사용하십시오.***
 ```java
-DoodleParams params = new DoodleParams(); // 涂鸦参数
+DoodleParams params = new DoodleParams(); // 그림 그리기 매개변수
 params.mImagePath = imagePath; // the file path of image
 DoodleActivity.startActivityForResult(MainActivity.this, params, REQ_CODE_DOODLE);
 ```
 See [DoodleParams](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/DoodleParams.java) for more details.
 
-***查看[DoodleParams](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/DoodleParams.java)获取更多涂鸦参数信息。***
+***[DoodleParams](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/DoodleParams.java) 더 많은 그림 그리기 매개변수 정보를 얻으려면 다음과 같은 항목들을 참고하세요:。***
 
 ###  B. Recommend, use DoodleView and customize your layout. 
 
-***推荐的方法：使用DoodleView，便于拓展，灵活性高，自定义自己的交互界面.***
+***추천하는 방법은 DoodleView를 사용하는 것입니다. 이는 확장성이 뛰어나며, 유연하며, 자체적으로 상호작용 인터페이스를 사용자 정의하기 쉬운 클래스입니다. DoodleView를 사용하여 자신만의 그림 그리기 앱을 만들 수 있으며, 이를 통해 그림 그리기 기능을 더욱 효과적으로 구현하고 사용자에게 더 좋은 경험을 제공할 수 있습니다.***
 
 ```java
 /*
 Whether or not to optimize drawing, it is suggested to open, which can optimize the drawing speed and performance.
 Note: When item is selected for editing after opening, it will be drawn at the top level, and not at the corresponding level until editing is completed.
-是否优化绘制，建议开启，可优化绘制速度和性能.
-注意：开启后item被选中编辑时时会绘制在最上面一层，直到结束编辑后才绘制在相应层级
+
+그림 그리기 최적화를 추천합니다. 이를 통해 그림 그리기 속도와 성능을 최적화할 수 있습니다.
+
+그러나 주의할 점은, 최적화를 켜면 아이템이 선택되어 편집 중일 때 해당 아이템이 최상위 레이어에 그려지며, 편집이 끝날 때까지 해당 레이어에 그려지지 않습니다. 이 부분에 주의하여 구현해야 합니다.
  */
 boolean optimizeDrawing = true;
 DoodleView mDoodleView = new DoodleView(this, bitmap, optimizeDrawing, new IDoodleListener() {
             /*
             called when save the doodled iamge. 
-            保存涂鸦图像时调用
+            doodle이 된 이미지를 저장할때 호출됩니다.
              */
             @Override
             public void onSaved(IDoodle doodle, Bitmap bitmap, Runnable callback) {
