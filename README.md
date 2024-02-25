@@ -26,13 +26,13 @@ Image doodle for Android. You can undo, zoom, move, add text, textures, etc. Als
 ![02](https://raw.githubusercontent.com/1993hzw/common/master/Doodle/02.png)
 ![03](https://raw.githubusercontent.com/1993hzw/common/master/Doodle/03_2.png)
 
-# Feature 特性
+# Feature 기능
 
-  * Brush and shape ***画笔及形状***
+  * Brush and shape ***브러쉬 및 모양***
 
     The brush can choose hand-painted, mosaic, imitation, eraser, text, texture, and the imitation function is similar to that in PS, copying somewhere in the picture. Shapes can be selected from hand-drawn, arrows, lines, circles, rectangles, and so on. The background color of the brush can be selected as a color, or an image.
 
-    ***画笔可以选择手绘、马赛克、仿制、橡皮擦、文字、贴图，其中仿制功能跟PS中的类似，复制图片中的某处地方。形状可以选择手绘、箭头、直线、圆、矩形等。画笔的底色可以选择颜色，或者一张图片。***
+    ***브러쉬는 손그림, 모자이크, 복제, 지우개, 텍스트, 스티커를 선택할 수 있습니다. 복제 기능은 PS의 것과 유사하며 이미지의 특정 부분을 복사합니다. 모양은 손그림, 화살표, 직선, 원, 사각형 등을 선택할 수 있습니다. 브러쉬의 배경색은 색상이나 이미지를 선택할 수 있습니다.***
 
   * Undo/Redo ***撤销/重做***
 
@@ -261,7 +261,7 @@ hzw19933@gmail.com
 Q&A <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=d225a990b29a135d4a601be7a198f04572f1dbd96ccd5be944ff2ef87dda5c11"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="Doodle-涂鸦交流群" title="Doodle-涂鸦交流群"></a>  6762102
 
 
-***欢迎大家访问[我的博客](https://blog.csdn.net/u012964944)，以便获取更多关于Doodle的文章哦.***
+***欢迎大家访问[我的博客](https://blog.csdn.net/u012964944)，내 블로그를 방문해주셔서 감사합니다. Doodle에 관한 더 많은 글을 읽어보세요!***
 
 [《Android涂鸦画板原理详解——从初级到高级（一）》](https://blog.csdn.net/u012964944/article/details/82703684)
 
