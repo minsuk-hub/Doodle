@@ -36,13 +36,13 @@ Image doodle for Android. You can undo, zoom, move, add text, textures, etc. Als
     
     ***모든 그림 작업 단계를 취소 및 되돌릴 수 있습니다。***
 
-  * Zoom, move, and rotate ***축소, 이동 및 회전***
+  * ***확대/축소, 이동 및 회전***
 
     In the process of doodle, you can freely zoom, move and rotate the picture with gestures. Also, you can move，rotate and scale the doodle item.
     
     ***그리기 과정 중에 이미지를 제스처로 자유롭게 축소, 이동, 회전할 수 있습니다. 그림을 이동, 회전, 축소할 수 있습니다.***
 
-  * Zoomer ***확대 및 축소 도구***
+  * ***확대 및 축소 도구***
 
     In order to doodle more finely, an zoomer can be set up during the doodle process.
     
@@ -65,13 +65,9 @@ dependencies {
 }
 ```
 
-There are two ways to use the Doodle library:
-
 ***Doodle 라이브러리를 사용하는 방법에는 두가지가 있습니다.***
 
-###  A. Launch DoodleActivity directly (the layout is like demo images above). If you need to customize more interactions, please use another method (Way B)．
-
-  ***이미 작성된 그림 그리기 인터페이스를 사용하여 직접 시작합니다. 시작 페이지는 위의 데모 이미지를 참조하십시오. 더 많은 사용자 정의 상호작용 방식이 필요한 경우, 다른 방법(B 방법)을 사용하십시오.***
+### ***A. 이미 작성된 그림 그리기 인터페이스를 사용하여 직접 시작합니다. 시작 페이지는 위의 데모 이미지를 참조하십시오. 더 많은 사용자 정의 상호작용 방식이 필요한 경우, 다른 방법(B 방법)을 사용하십시오.***
 ```java
 DoodleParams params = new DoodleParams(); // 그림 그리기 매개변수
 params.mImagePath = imagePath; // the file path of image
@@ -81,9 +77,7 @@ See [DoodleParams](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main
 
 ***[DoodleParams](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/DoodleParams.java) 더 많은 그림 그리기 매개변수 정보를 얻으려면 다음과 같은 항목들을 참고하세요:。***
 
-###  B. Recommend, use DoodleView and customize your layout. 
-
-***추천하는 방법은 DoodleView를 사용하는 것입니다. 이는 확장성이 뛰어나며, 유연하며, 자체적으로 상호작용 인터페이스를 사용자 정의하기 쉬운 클래스입니다. DoodleView를 사용하여 자신만의 그림 그리기 앱을 만들 수 있으며, 이를 통해 그림 그리기 기능을 더욱 효과적으로 구현하고 사용자에게 더 좋은 경험을 제공할 수 있습니다.***
+###  B. ***추천하는 방법은 DoodleView를 사용하는 것입니다. 이는 확장성이 뛰어나며, 유연하며, 자체적으로 상호작용 인터페이스를 사용자 정의하기 쉬운 클래스입니다. DoodleView를 사용하여 자신만의 그림 그리기 앱을 만들 수 있으며, 이를 통해 그림 그리기 기능을 더욱 효과적으로 구현하고 사용자에게 더 좋은 경험을 제공할 수 있습니다.***
 
 ```java
 /*
