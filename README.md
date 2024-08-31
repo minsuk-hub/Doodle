@@ -13,10 +13,7 @@
 
 [![](https://jitpack.io/v/1993hzw/Doodle.svg)](https://jitpack.io/#1993hzw/Doodle)
 
-Image doodle for Android. You can undo, zoom, move, add text, textures, etc. Also, a powerful, customizable and extensible doodle framework & multi-function drawing board.
-
-
-안드로이드 이미지 그리기 앱으로, 되돌리기, 확대/축소, 이동, 텍스트 추가, 스티커 추가 등의 기능을 갖추고 있습니다. 강력하고 사용자 정의 및 확장 가능한 그림판 프레임워크이자 다기능 그림판입니다.
+Doodle은 안드로이드 이미지 그리기 앱으로, 되돌리기, 확대/축소, 이동, 텍스트 추가, 스티커 추가 등의 기능을 갖추고 있습니다. 강력하고 사용자 정의 및 확장 가능한 그림판 프레임워크이자 다기능 그림판입니다.
 
 
 
@@ -30,27 +27,24 @@ Image doodle for Android. You can undo, zoom, move, add text, textures, etc. Als
 
   * ***브러쉬 및 모양***
 
-    ***브러쉬는 손그림, 모자이크, 복제, 지우개, 텍스트, 스티커를 선택할 수 있습니다. 복제 기능은 PS의 것과 유사하며 이미지의 특정 부분을 복사합니다. 모양은 손그림, 화살표, 직선, 원, 사각형 등을 선택할 수 있습니다. 브러쉬의 배경색은 색상이나 이미지를 선택할 수 있습니다.***
+    *브러쉬는 손그림, 모자이크, 복제, 지우개, 텍스트, 스티커를 선택할 수 있습니다. 복제 기능은 PS의 것과 유사하며 이미지의 특정 부분을 복사합니다. 모양은 손그림, 화살표, 직선, 원, 사각형 등을 선택할 수 있습니다. 브러쉬의 배경색은 색상이나 이미지를 선택할 수 있습니다.*
 
-    ***취소/되돌리기***
+  *  ***취소/되돌리기***
     
-    ***모든 그림 작업 단계를 취소 및 되돌릴 수 있습니다。***
+     *모든 그림 작업 단계를 취소 및 되돌릴 수 있습니다。*
 
   * ***확대/축소, 이동 및 회전***
 
-    In the process of doodle, you can freely zoom, move and rotate the picture with gestures. Also, you can move，rotate and scale the doodle item.
-    
-    ***그리기 과정 중에 이미지를 제스처로 자유롭게 축소, 이동, 회전할 수 있습니다. 그림을 이동, 회전, 축소할 수 있습니다.***
+    *그리기 과정 중에 이미지를 제스처로 자유롭게 축소, 이동, 회전할 수 있습니다. 그림을 이동, 회전, 축소할 수 있습니다.*
 
   * ***확대 및 축소 도구***
 
-    In order to doodle more finely, an zoomer can be set up during the doodle process.
-    
-    ***그림을 더 디테일하게 그리기 위해, 그림 그리기 중에 확대기를 사용할 수 있습니다.***
+    *그림을 더 디테일하게 그리기 위해, 그림 그리기 중에 확대기를 사용할 수 있습니다.*
 
-# Usage 用法
 
-#### Gradle 
+# 사용 방법
+
+#### Build.Gradle 
 
 ```gradle
 allprojects {
@@ -67,23 +61,18 @@ dependencies {
 
 ***Doodle 라이브러리를 사용하는 방법에는 두가지가 있습니다.***
 
-### ***A. 이미 작성된 그림 그리기 인터페이스를 사용하여 직접 시작합니다. 시작 페이지는 위의 데모 이미지를 참조하십시오. 더 많은 사용자 정의 상호작용 방식이 필요한 경우, 다른 방법(B 방법)을 사용하십시오.***
+### ***A. 이미 작성된 그림 그리기 인터페이스를 사용하여 직접 시작합니다. 시작 페이지는 위의 데모 이미지를 참조하십시오. 더 많은 사용자 정의 상호작용 방식이 필요한 경우, 다른 방법(B 방법)을 사용하세요.***
 ```java
 DoodleParams params = new DoodleParams(); // 그림 그리기 매개변수
-params.mImagePath = imagePath; // the file path of image
+params.mImagePath = imagePath; // 이미지 파일의 경로
 DoodleActivity.startActivityForResult(MainActivity.this, params, REQ_CODE_DOODLE);
 ```
-See [DoodleParams](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/DoodleParams.java) for more details.
-
-***[DoodleParams](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/DoodleParams.java) 더 많은 그림 그리기 매개변수 정보를 얻으려면 다음과 같은 항목들을 참고하세요:。***
+*[DoodleParams](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/DoodleParams.java) 더 많은 그림 그리기 매개변수 정보를 얻으려면 다음과 같은 항목들을 참고하세요*
 
 ###  B. ***추천하는 방법은 DoodleView를 사용하는 것입니다. 이는 확장성이 뛰어나며, 유연하며, 자체적으로 상호작용 인터페이스를 사용자 정의하기 쉬운 클래스입니다. DoodleView를 사용하여 자신만의 그림 그리기 앱을 만들 수 있으며, 이를 통해 그림 그리기 기능을 더욱 효과적으로 구현하고 사용자에게 더 좋은 경험을 제공할 수 있습니다.***
 
 ```java
 /*
-Whether or not to optimize drawing, it is suggested to open, which can optimize the drawing speed and performance.
-Note: When item is selected for editing after opening, it will be drawn at the top level, and not at the corresponding level until editing is completed.
-
 그림 그리기 최적화를 추천합니다. 이를 통해 그림 그리기 속도와 성능을 최적화할 수 있습니다.
 
 그러나 주의할 점은, 최적화를 켜면 아이템이 선택되어 편집 중일 때 해당 아이템이 최상위 레이어에 그려지며, 편집이 끝날 때까지 해당 레이어에 그려지지 않습니다. 이 부분에 주의하여 구현해야 합니다.
@@ -95,36 +84,33 @@ DoodleView mDoodleView = new DoodleView(this, bitmap, optimizeDrawing, new IDood
              */
             @Override
             public void onSaved(IDoodle doodle, Bitmap bitmap, Runnable callback) {
-               //do something
+               // 실행할 코드
             }
 
             /*
-             called when it is ready to doodle because the view has been measured. Now, you can set size, color, pen, shape, etc. 
-             此时view已经测量完成，涂鸦前的准备工作已经完成，在这里可以设置大小、颜色、画笔、形状等。
+             뷰의 측정이 완료되어 이제 그리기 준비가 완료되었습니다. 이 시점에서 크기, 색상, 펜, 모양 등을 설정할 수 있습니다.
              */
             @Override
             public void onReady(IDoodle doodle) {
-                //do something
+                // 실행할 코드
             }
         });
 
 mTouchGestureListener = new DoodleOnTouchGestureListener(mDoodleView, new DoodleOnTouchGestureListener.ISelectionListener() {
     /*
-     called when the item(such as text, texture) is selected/unselected.
-     item（如文字，贴图）被选中或取消选中时回调
+     아이템(예: 텍스트, 텍스처)이 선택되거나 선택 해제될 때 호출됩니다.
      */
     @Override
     public void onSelectedItem(IDoodle doodle, IDoodleSelectableItem selectableItem, boolean selected) {
-        //do something
+        // 실행할 코드
     }
 
     /*
-     called when you click the view to create a item(such as text, texture).
-     点击View中的某个点创建可选择的item（如文字，贴图）时回调
+     뷰를 클릭하여 아이템(예: 텍스트, 텍스처)을 생성할 때 호출됩니다.
      */
     @Override
     public void onCreateSelectableItem(IDoodle doodle, float x, float y) {
-        //do something
+        // 실행할 코드
         /*
 if (mDoodleView.getPen() == DoodlePen.TEXT) {
         IDoodleSelectableItem item = new DoodleText(mDoodleView, "hello", 20 * mDoodleView.getUnitSize(), new DoodleColor(Color.RED), x, y);
@@ -137,23 +123,21 @@ if (mDoodleView.getPen() == DoodlePen.TEXT) {
     }
 });
 
-// create touch detector, which dectects the gesture of scoll, scale, single tap, etc.
-// 创建手势识别器，识别滚动，缩放，点击等手势
+// 터치 감지기를 생성하여 스크롤, 확대/축소, 단일 탭 등의 제스처를 감지합니다.
 IDoodleTouchDetector detector = new DoodleTouchDetector(getApplicationContext(), mTouchGestureListener);
 mDoodleView.setDefaultTouchDetector(detector);
 
-// Setting parameters.设置参数
+// 파라미터 설정
 mDoodleView.setPen(DoodlePen.TEXT);
 mDoodleView.setShape(DoodleShape.HAND_WRITE);
 mDoodleView.setColor(new DoodleColor(Color.RED));
 
 
 ```
-When turning off optimized drawing, you only need to call `addItem(IDoodleItem)` when you create it. When you start optimizing drawing, the created or selected item needs to call `markItemToOptimizeDrawing(IDoodleItem)`, and you should call `notifyItemFinishedDrawing(IDoodleItem)` when you finish drawing. So this is generally used in code:
+최적화된 드로잉을 끌 때, 아이템을 생성할 때 `addItem(IDoodleItem)`만 호출하면 됩니다. 드로잉 최적화를 시작할 때는 생성된 아이템이나 선택된 아이템에 대해 `markItemToOptimizeDrawing(IDoodleItem)`을 호출해야 하며, 드로잉이 끝나면 `notifyItemFinishedDrawing(IDoodleItem)`을 호출해야 합니다. 그래서 일반적으로 코드에서 이렇게 사용됩니다:
 
-***当关闭优化绘制时,只需要在创建时调用`addItem(IDoodleItem)`;而当开启优化绘制时，创建或选中的item需要调用`markItemToOptimizeDrawing(IDoodleItem)`,结束绘制时应调用`notifyItemFinishedDrawing(IDoodleItem)`。因此在代码中一般这样使用：***
 ```java
-// when you are creating a item or selecting a item to edit
+// 아이템을 생성하거나 아이템을 선택하여 편집할 때
 if (mDoodle.isOptimizeDrawing()) {
    mDoodle.markItemToOptimizeDrawing(item);
 } else {
@@ -162,36 +146,30 @@ if (mDoodle.isOptimizeDrawing()) {
 
 ...
 
-// finish creating or editting
+// 생성 또는 편집 완료
 if (mDoodle.isOptimizeDrawing()) {
    mDoodle.notifyItemFinishedDrawing(item);
 }
 ```
 
 
-Then, add the DoodleView to your layout. Now you can start doodling freely.
+그런 다음 DoodleView를 레이아웃에 추가하세요. 이제 자유롭게 그림을 그릴 수 있습니다.
 
- ***把DoodleView添加到布局中，然后开始涂鸦。***
+# 데모
 
-# Demo 实例
+다음은 두들 프레임워크를 사용하는 방법을 가르쳐 줄 간단한 예제들입니다.
 
-Here are other simple examples to teach you how to use the doodle framework.
+1. **[모자이크 효과](https://github.com/1993hzw/Doodle/blob/master/app/src/main/java/cn/hzw/doodledemo/MosaicDemo.java)**
 
-1. **[Mosaic effect](https://github.com/1993hzw/Doodle/blob/master/app/src/main/java/cn/hzw/doodledemo/MosaicDemo.java)**
- ***[马赛克效果](https://github.com/1993hzw/Doodle/blob/master/app/src/main/java/cn/hzw/doodledemo/MosaicDemo.java)***
+2. **[확대 및 축소 제스쳐로 텍스트 크기 변경](https://github.com/1993hzw/Doodle/blob/master/app/src/main/java/cn/hzw/doodledemo/ScaleGestureItemDemo.java)**
 
-2. **[Change text's size by scale gesture](https://github.com/1993hzw/Doodle/blob/master/app/src/main/java/cn/hzw/doodledemo/ScaleGestureItemDemo.java)**
- ***[手势缩放文本大小](https://github.com/1993hzw/Doodle/blob/master/app/src/main/java/cn/hzw/doodledemo/ScaleGestureItemDemo.java)***
+이어서...
 
-More...
+이제 DoodleActivity에서 DoodleView를 사용하고 있다는 것을 알게 되셨을 겁니다. DoodleActivity처럼 사용자 정의 레이아웃을 구성할 수도 있습니다. 자세한 내용은 [DoodleActivity](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/DoodleActivity.java)를 참고하세요.
 
-Now I think you should know that DoodleActivity has used DoodleView. You also can customize your layout like DoodleActivity. See [DoodleActivity](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/DoodleActivity.java) for more details.
+***DoodleView는 IDoodle 인터페이스를 구현하였습니다.***
 
-***现在你应该知道DoodleActivity就是使用了DoodleView实现涂鸦，你可以参照[DoodleActivity](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/DoodleActivity.java)是怎么实现涂鸦界面的交互来实现自己的自定义页面。***
 
-DoodleView has implemented IDoodle.
-
-***DoodleView实现了IDoodle接口。***
 ```java
 public interface IDoodle {
 ...
@@ -212,38 +190,30 @@ public interface IDoodle {
 ...
 }
 ```
-# Framework diagram 框架图
+# 프레임워크 다이어그램
 
-![structure](https://raw.githubusercontent.com/1993hzw/common/master/Doodle/structure.png)
+![구조](https://raw.githubusercontent.com/1993hzw/common/master/Doodle/structure.png)
 
-### Doodle Coordinate 涂鸦坐标
-![coordinate](https://raw.githubusercontent.com/1993hzw/common/master/Doodle/doodle_coordinate.png)
+### Doodle 좌표
+![좌표](https://raw.githubusercontent.com/1993hzw/common/master/Doodle/doodle_coordinate.png)
 
-# Extend 拓展
+# 확장
 
-You can create a customized item like [DoodlePath, DoodleText, DoodleBitmap](https://github.com/1993hzw/Doodle/tree/master/doodle/src/main/java/cn/hzw/doodle) which extend [DoodleItemBase](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/DoodleItemBase.java) or implement [IDoodleItem](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/core/IDoodleItem.java). 
+다음은 다양한 사용자 정의 항목을 생성하는 방법입니다:
 
-***实现[IDoodleItem](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/core/IDoodleItem.java)接口或基础[DoodleItemBase](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/DoodleItemBase.java)，用于创建自定义涂鸦条目item，比如[DoodlePath, DoodleText, DoodleBitmap](https://github.com/1993hzw/Doodle/tree/master/doodle/src/main/java/cn/hzw/doodle)***
+- **[IDoodleItem](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/core/IDoodleItem.java) 인터페이스를 구현하거나 [DoodleItemBase](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/DoodleItemBase.java)를 확장하여 [DoodlePath, DoodleText, DoodleBitmap](https://github.com/1993hzw/Doodle/tree/master/doodle/src/main/java/cn/hzw/doodle)와 같은 사용자 정의 두들 항목을 생성할 수 있습니다.**
 
-You can create a customized pen like DoodlePen which implements [IDoodlePen](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/core/IDoodlePen.java).
+- **[IDoodlePen](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/core/IDoodlePen.java) 인터페이스를 구현하여 DoodlePen과 같은 사용자 정의 펜을 생성할 수 있습니다.**
 
-***实现[IDoodlePen](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/core/IDoodlePen.java)接口用于创建自定义画笔pen，比如DoodlePen***
+- **[IDoodleShape](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/core/IDoodleShape.java) 인터페이스를 구현하여 DoodleShape와 같은 사용자 정의 형상을 생성할 수 있습니다.**
 
-You can create a customized shape like DoodleShape which implements [IDoodleShape](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/core/IDoodleShape.java). 
+- **[IDoodleColor](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/core/IDoodleColor.java) 인터페이스를 구현하여 DoodleColor와 같은 사용자 정의 색상을 생성할 수 있습니다.**
 
-***实现[IDoodleShape](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/core/IDoodleShape.java)接口用于创建自定义形状shape，比如DoodleShape***
-
-You can create a customized color like DoodleColor which implements [IDoodleColor](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/core/IDoodleColor.java). 
-
-***实现[IDoodleColor](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/core/IDoodleColor.java)接口用于创建自定义颜色color，比如DoodleColor***
-
-You can create a customized touch gesture detector like [DoodleTouchDetector](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/DoodleTouchDetector.java)([GestureListener](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/DoodleOnTouchGestureListener.java)) which implements [IDoodleTouchDetector](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/core/IDoodleTouchDetector.java). 
-
-***实现[IDoodleTouchDetector](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/core/IDoodleTouchDetector.java)接口用于创建自定义手势识别器，比如DoodleTouchDetector***
+- **[IDoodleTouchDetector](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/core/IDoodleTouchDetector.java) 인터페이스를 구현하여 [DoodleTouchDetector](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/DoodleTouchDetector.java)([GestureListener](https://github.com/1993hzw/Doodle/blob/master/doodle/src/main/java/cn/hzw/doodle/DoodleOnTouchGestureListener.java))와 같은 사용자 정의 터치 제스처 감지기를 생성할 수 있습니다.**
 
 ***[Others](https://github.com/1993hzw/Doodle/blob/master/extend.md)***
 
-# The developer 开发者
+# 개발자
 
 hzw19933@gmail.com
 

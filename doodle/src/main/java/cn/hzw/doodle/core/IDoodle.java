@@ -5,34 +5,33 @@ import android.graphics.Bitmap;
 import java.util.List;
 
 /**
- * Created on 27/06/2018.
+ * 27/06/2018 생성.
  */
 
 public interface IDoodle {
     /**
-     * Gets the unit size in the current doodle coordinate system, which refers to the dp, independent of the image
-     * 获取当前涂鸦坐标系中的单位大小，该单位参考dp，独立于图片
+     * 현재 Doodle 좌표계에서 단위 크기를 가져옵니다. 이는 이미지와는 무관하게 dp를 기준으로 합니다.
      *
      * @return
      */
     public float getUnitSize();
 
     /**
-     * 设置图片旋转值
+     * 이미지 회전 값을 설정합니다.
      *
      * @param degree
      */
     public void setDoodleRotation(int degree);
 
     /**
-     * 获取图片旋转值
+     * 이미지 회전 값을 가져옵니다.
      *
      * @return
      */
     public int getDoodleRotation();
 
     /**
-     * 设置图片缩放倍数
+     * 이미지 축소/확대 배율을 설정합니다.
      *
      * @param scale
      * @param pivotX
@@ -41,36 +40,36 @@ public interface IDoodle {
     public void setDoodleScale(float scale, float pivotX, float pivotY);
 
     /**
-     * 获取图片缩放倍数
+     * 이미지 축소/확대 배율 값을 가져옵니다.
      */
     public float getDoodleScale();
 
     /**
-     * 设置画笔
+     * 펜의 값을 설정합니다.
      *
      * @param pen
      */
     public void setPen(IDoodlePen pen);
 
     /**
-     * 获取画笔
+     * 펜의 값을 가져옵니다.
      */
     public IDoodlePen getPen();
 
     /**
-     * 设置画笔形状
+     * 도형의 값을 설정합니다.
      *
      * @param shape
      */
     public void setShape(IDoodleShape shape);
 
     /**
-     * 获取画笔形状
+     * 도형의 값을 가져옵니다.
      */
     public IDoodleShape getShape();
 
     /**
-     * 设置图片偏移量x
+     * 이미지의 x 방향 오프셋과 y오프셋을 동시에 설정합니다.
      *
      * @param transX
      */
@@ -78,105 +77,105 @@ public interface IDoodle {
 
 
     /**
-     * 设置图片偏移量x
+     * 이미지의 x 방향 오프셋을 설정합니다.
      *
      * @param transX
      */
     public void setDoodleTranslationX(float transX);
 
     /**
-     * 获取图片偏移量x
+     * 이미지의 x 방향 오프셋을 가져옵니다.
      *
      * @return
      */
     public float getDoodleTranslationX();
 
     /**
-     * 设置图片偏移量y
+     * 이미지의 y 방향 오프셋을 설정합니다.
      *
      * @param transY
      */
     public void setDoodleTranslationY(float transY);
 
     /**
-     * 获取图片偏移量y
+     * 이미지의 y 방향 오프셋을 가져옵니다.
      *
      * @return
      */
     public float getDoodleTranslationY();
 
     /**
-     * 设置大小
+     * 크기를 설정합니다.
      *
      * @param paintSize
      */
     public void setSize(float paintSize);
 
     /**
-     * 获取大小
+     * 크기를 가져옵니다.
      *
      * @return
      */
     public float getSize();
 
     /**
-     * 设置颜色
+     * 색상을 설정합니다.
      *
      * @param color
      */
     public void setColor(IDoodleColor color);
 
     /**
-     * 获取颜色
+     * 색상을 가져옵니다.
      *
      * @return
      */
     public IDoodleColor getColor();
 
     /**
-     * 最小缩放倍数限制
+     * 최소 축소 및 확대 배율을 제한합니다.
      *
      * @param minScale
      */
     public void setDoodleMinScale(float minScale);
 
     /**
-     * 最小缩放倍数限制
+     * 최소 축소 및 확대 배율을 가져옵니다.
      *
      * @return
      */
     public float getDoodleMinScale();
 
     /**
-     * 最大缩放倍数限制
+     * 최대 축소 및 확대 배율을 제한합니다.
      *
      * @param maxScale
      */
     public void setDoodleMaxScale(float maxScale);
 
     /**
-     * 最大缩放倍数限制
+     * 최대 축소 및 확대 배율을 가져옵니다.
      *
      * @return
      */
     public float getDoodleMaxScale();
 
     /**
-     * 添加item
+     * item을 추가합니다.
      *
      * @param doodleItem
      */
     public void addItem(IDoodleItem doodleItem);
 
     /**
-     * 移除item
+     * item을 삭제합니다.
      *
      * @param doodleItem
      */
     public void removeItem(IDoodleItem doodleItem);
 
     /**
-     * total item count
+     * 전체 아이템의 갯수
      * exclude redo items
      *
      * @return
